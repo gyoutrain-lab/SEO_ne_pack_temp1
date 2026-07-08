@@ -3,316 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template Detail Paket - SEO Tampil</title>
+    <title>Jasa Pembuatan Website Bisnis Profesional - WebXcelerate</title>
     <style>
-        /* --- STYLING DASAR & RESET --- */
+        /* ==========================================================================
+           FONTI & BASE STYLING (SOP ON-PAGE: Kecepatan Muat Maksimal & Bebas Google Font)
+           ========================================================================== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
         }
         body {
             background-color: #f8fafc;
             color: #334155;
             line-height: 1.6;
-            padding: 40px 0;
         }
-        .wrapper {
+        .container {
             width: 90%;
             max-width: 1100px;
             margin: 0 auto;
         }
-        .page-title {
-            text-align: center;
-            margin-bottom: 50px;
+
+        /* ==========================================================================
+           HEADER & NAVIGATION (SOP UX: Navigasi Bersih, Struktur Indeksasi Jelas)
+           ========================================================================== */
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
             color: #0f172a;
         }
-        .page-title h1 { font-size: 36px; }
-        .page-title p { color: #64748b; margin-top: 10px; }
-
-        /* --- TEMPLATE BOX CONTAINER --- */
-        .template-box {
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            padding: 40px;
-            margin-bottom: 60px;
-            border: 1px solid #e2e8f0;
-        }
-        .template-tag {
-            display: inline-block;
-            background-color: #e2e8f0;
+        .logo span { color: #2563eb; }
+        nav a {
+            text-decoration: none;
             color: #475569;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            font-weight: 600;
+            margin-left: 20px;
+            font-size: 14px;
         }
 
-        /* --- STRUKTUR DETAIL PAKET --- */
-        .paket-header {
-            margin-bottom: 30px;
+        /* ==========================================================================
+           HERO SECTION (SOP CTR OPTIMIZATION: Headline Komersial Berbobot)
+           ========================================================================== */
+        .hero {
+            padding: 80px 0;
+            background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.05), transparent);
+            text-align: center;
         }
-        .paket-title {
+        /* Menggunakan Target Kata Kunci Komersial Utama */
+        .hero h1 {
+            font-size: 42px;
+            color: #0f172a;
+            font-weight: 800;
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            line-height: 1.2;
+        }
+        .hero p {
+            font-size: 18px;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto 35px auto;
+        }
+        .btn-primary {
+            display: inline-block;
+            background-color: #2563eb;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 35px;
+            border-radius: 8px;
+            font-weight: 700;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+            transition: background 0.2s;
+        }
+        .btn-primary:hover { background-color: #1d4ed8; }
+
+        /* ==========================================================================
+           LAYANAN UTAMA (SOP STRATEGI ON-PAGE: Penjabaran Niche Tanpa Batas)
+           ========================================================================== */
+        .services { padding: 60px 0; background-color: #ffffff; }
+        .section-title {
+            text-align: center;
             font-size: 28px;
             color: #0f172a;
             font-weight: 700;
+            margin-bottom: 40px;
         }
-        .paket-target {
-            font-size: 15px;
-            color: #64748b;
-            margin-top: 5px;
-            font-style: italic;
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
         }
-        .paket-price {
-            font-size: 32px;
-            font-weight: 800;
-            color: #0056b3;
-            margin-top: 15px;
+        .service-card {
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            background-color: #f8fafc;
         }
-        .paket-price span {
-            font-size: 16px;
-            color: #64748b;
-            font-weight: normal;
-        }
+        .service-card h3 { font-size: 18px; color: #0f172a; margin-bottom: 10px; }
+        .service-card p { font-size: 14px; color: #64748b; }
 
-        .divider {
-            border: 0;
-            border-top: 1px dashed #cbd5e1;
-            margin: 30px 0;
+        /* ==========================================================================
+           ARTIKEL PILAR OLEH PAKET TAMPIL MAKSIMAL (SOP KONTEN: Minimal 1.000 Kata)
+           ========================================================================== */
+        .content-section { padding: 80px 0; }
+        .article-box {
+            background-color: #ffffff;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            padding: 45px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
         }
+        /* Struktur Hierarki Heading Sesuai Standar Audit GSC */
+        .article-box h2 { font-size: 26px; color: #0f172a; margin-bottom: 20px; font-weight: 700; }
+        .article-box h3 { font-size: 18px; color: #0f172a; margin: 25px 0 10px 0; font-weight: 600; }
+        .article-box p { font-size: 15px; color: #475569; margin-bottom: 15px; text-align: justify; }
+        
+        /* Gaya Blok Kutipan / Highlight Informasi Internal */
+        .highlight-box {
+            background-color: #eff6ff;
+            border-left: 4px solid #2563eb;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .highlight-box p { font-style: italic; margin-bottom: 0; color: #1e40af; }
 
-        .section-sub-title {
-            font-size: 18px;
-            color: #0f172a;
-            margin-bottom: 20px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* --- DAFTAR FITUR & DETAIL SOP --- */
-        .sop-list {
-            list-style: none;
-        }
-        .sop-item {
-            margin-bottom: 25px;
-            position: relative;
-            padding-left: 30px;
-        }
-        .sop-item::before {
-            content: "✓";
-            color: #10b981;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-            top: 2px;
-            font-size: 18px;
-        }
-        .sop-title {
-            display: block;
-            font-size: 16px;
-            font-weight: 600;
-            color: #1e293b;
-        }
-        .sop-desc {
-            display: block;
+        /* ==========================================================================
+           FOOTER (SOP TEKNIS: Informasi Penutup Terbaca Robot Google)
+           ========================================================================== */
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            padding: 40px 0;
             font-size: 14px;
-            color: #64748b;
-            margin-top: 4px;
-            text-align: justify;
+            text-align: center;
+            border-top: 1px solid #1e293b;
         }
 
-        /* --- ACTION BUTTON --- */
-        .btn-order {
-            display: inline-block;
-            background-color: #0056b3;
-            color: #ffffff;
-            padding: 14px 35px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 6px;
-            margin-top: 20px;
-            transition: background 0.3s;
-            box-shadow: 0 4px 6px rgba(0, 86, 179, 0.2);
-        }
-        .btn-order:hover {
-            background-color: #003d82;
-        }
-
-        /* --- VARIASI WARNA PREMIUM (PAKET 2 & 3) --- */
-        .box-premium {
-            border-left: 6px solid #ffc107;
-        }
-        .box-exclusive {
-            border-left: 6px solid #0f172a;
-            background-color: #fafafa;
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .article-box { padding: 25px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="wrapper">
-        
-        <div class="page-title">
-            <h1>Arsip Template Paket - SEO Tampil</h1>
-            <p>Gunakan struktur di bawah ini sebagai template standar pilar penawaran agensi Anda.</p>
+    <!-- NAVIGASI UTAMA -->
+    <header>
+        <div class="container header-flex">
+            <!-- GANTI DI SINI: Nama Brand / Logo Bisnis Anda -->
+            <div class="logo">Web<span>Xcelerate</span></div>
+            <nav>
+                <a href="#layanan">Layanan</a>
+                <a href="#panduan-seo">Edukasi Bisnis</a>
+                <a href="#kontak">Hubungi Kami</a>
+            </nav>
         </div>
+    </header>
 
-        <!-- ======================================================== -->
-        <!-- 1. TEMPLATE PAKET RINTISAN -->
-        <!-- ======================================================== -->
-        <div class="template-box">
-            <span class="template-tag">Opsi 01: Paket Fondasi</span>
+    <!-- HERO SECTION: STRATEGI KONVERSI TRAFIK -->
+    <section class="hero">
+        <div class="container">
+            <!-- GANTI DI SINI: Headline Utama yang Mengandung Keyword Komersial Tinggi -->
+            <h1>Jasa Pembuatan Website Bisnis Profesional & Optimal Guna Lonjakan Penjualan</h1>
+            <p>Kami membangun infrastruktur digital berkecepatan tinggi yang dirancang khusus untuk mengubah pengunjung biasa menjadi pelanggan setia bisnis Anda.</p>
             
-            <div class="paket-header">
-                <!-- GANTI DI SINI: Nama Paket -->
-                <div class="paket-title">Paket Rintisan</div>
-                <!-- GANTI DI SINI: Segmentasi Ringkas -->
-                <div class="paket-target">Cocok untuk UMKM, bisnis lokal baru, atau personal blog yang ingin mulai membangun fondasi pencarian di Google.</div>
-                <!-- GANTI DI SINI: Nominal Harga -->
-                <div class="paket-price">Rp 1.5M <span>/ Bulan</span></div>
-            </div>
-
-            <hr class="divider">
-            <div class="section-sub-title">Cakupan Kerja Detail (SOP):</div>
-
-            <ul class="sop-list">
-                <!-- ITEM 1 -->
-                <li class="sop-item">
-                    <!-- GANTI DI SINI: Judul Fitur -->
-                    <span class="sop-title">Audit Website & Kompetitor</span>
-                    <!-- GANTI DI SINI: Penjelasan Detail Fitur -->
-                    <span class="sop-desc">Analisis mendalam performa web Anda saat ini, pembersihan error indeksasi mendasar, dan pemetaan strategi jitu dari 3 kompetitor utama di wilayah Anda.</span>
-                </li>
-                <!-- ITEM 2 -->
-                <li class="sop-item">
-                    <span class="sop-title">Riset 20 Kata Kunci Potensial</span>
-                    <span class="sop-desc">Pencarian keywords dengan volume pencarian stabil dan tingkat persaingan rendah-menengah (Long-tail & Local intent) agar website baru Anda cepat merangkak naik ke halaman utama.</span>
-                </li>
-                <!-- ITEM 3 -->
-                <li class="sop-item">
-                    <span class="sop-title">Optimasi On-Page Dasar</span>
-                    <span class="sop-desc">Perbaikan struktur kode esensial seperti Title Tag, Meta Description, susunan Heading hierarki (H1-H3), serta kompresi dan optimasi kecepatan gambar di 5 halaman menu utama.</span>
-                </li>
-                <!-- ITEM 4 -->
-                <li class="sop-item">
-                    <span class="sop-title">Laporan Bulanan</span>
-                    <span class="sop-desc">Transparansi penuh lewat laporan bulanan tertulis yang melampirkan pergerakan posisi kata kunci harian dan data statistik impresi klik asli dari Google Search Console.</span>
-                </li>
-            </ul>
-
-            <!-- GANTI DI SINI: Tautan WhatsApp Custom Anda -->
-            <a href="https://wa.me/628123456789?text=Halo%20SEO%20Tampil,%20saya%20ingin%20ambil%20Paket%20Rintisan" target="_blank" class="btn-order">Pilih Paket Rintisan</a>
+            <!-- GANTI DI SINI: Link CTA (Misal Tautan Form Pembelian / WhatsApp Kontak) -->
+            <a href="https://wa.me/628123456789?text=Halo%20WebXcelerate,%20saya%20tertarik%20dengan%20Jasa%20Pembuatan%20Website" target="_blank" class="btn-primary">Konsultasi Proyek Gratis</a>
         </div>
+    </section>
 
+    <!-- GRID LAYANAN: HASIL EKSEKUSI RISET KATA KUNCI LONG-TAIL -->
+    <section class="services" id="layanan">
+        <div class="container">
+            <h2 class="section-title">Solusi Digital Eksklusif Bisnis Anda</h2>
+            <div class="service-grid">
+                
+                <!-- GANTI DI SINI: Kartu Layanan 1 (Gunakan Istilah Niche Hasil Riset) -->
+                <div class="service-card">
+                    <h3>Website E-Commerce Modern</h3>
+                    <p>Integrasi sistem pembayaran otomatis, manajemen inventaris stok real-time, dan alur checkout super ringkas demi menekan angka pembatalan keranjang belanja.</p>
+                </div>
 
-        <!-- ======================================================== -->
-        <!-- 2. TEMPLATE PAKET TAMPIL MAKSIMAL -->
-        <!-- ======================================================== -->
-        <div class="template-box box-premium">
-            <span class="template-tag" style="background-color: #ffc107; color: #1e293b;">Opsi 02: Paling Populer</span>
-            
-            <div class="paket-header">
-                <!-- GANTI DI SINI: Nama Paket -->
-                <div class="paket-title">Paket Tampil Maksimal</div>
-                <!-- GANTI DI SINI: Segmentasi Ringkas -->
-                <div class="paket-target">Pilihan terbaik untuk bisnis yang siap bersaing ketat, mendominasi kata kunci industri, dan meningkatkan konversi penjualan.</div>
-                <!-- GANTI DI SINI: Nominal Harga -->
-                <div class="paket-price" style="color: #d97706;">Rp 3.5M <span>/ Bulan</span></div>
+                <!-- GANTI DI SINI: Kartu Layanan 2 -->
+                <div class="service-card">
+                    <h3>Landing Page Konversi Tinggi</h3>
+                    <p>Struktur halaman landas satu kolom berkecepatan tinggi yang dioptimasi khusus untuk promosi produk retail, peluncuran kursus, atau penawaran produk digital.</p>
+                </div>
+
+                <!-- GANTI DI SINI: Kartu Layanan 3 -->
+                <div class="service-card">
+                    <h3>Web Profil Perusahaan (B2B)</h3>
+                    <p>Arsitektur web corporate formal yang memancarkan kredibilitas instan, dilengkapi halaman portofolio interaktif untuk memenangkan kepercayaan klien besar.</p>
+                </div>
+
             </div>
-
-            <hr class="divider">
-            <div class="section-sub-title">Cakupan Kerja Detail (SOP):</div>
-
-            <ul class="sop-list">
-                <!-- ITEM 1 -->
-                <li class="sop-item">
-                    <span class="sop-title">Semua Fitur Paket Rintisan</span>
-                    <span class="sop-desc">Mencakup pembersihan teknis menyeluruh, setup awal seluruh konsol web Google, serta peningkatan intensitas pelaporan berkala menjadi laporan ringkas setiap minggunya.</span>
-                </li>
-                <!-- ITEM 2 -->
-                <li class="sop-item">
-                    <span class="sop-title">Riset Kata Kunci Tanpa Batas</span>
-                    <span class="sop-desc">Kami targetkan dan petakan seluruh variasi kata kunci komersial, informasional edukatif, hingga long-tail keywords potensial untuk menjaring konversi calon pembeli sekecil apa pun.</span>
-                </li>
-                <!-- ITEM 3 -->
-                <li class="sop-item">
-                    <span class="sop-title">Optimasi On-Page & Konten Bulanan</span>
-                    <span class="sop-desc">Optimasi penuh untuk penambahan halaman produk baru tanpa batas kuota + pembuatan serta rilis 4 artikel SEO-friendly berkualitas tinggi (1.000+ kata) orisinal buatan manusia per bulan.</span>
-                </li>
-                <!-- ITEM 4 -->
-                <li class="sop-item">
-                    <span class="sop-title">Strategi Backlink Aman (White Hat)</span>
-                    <span class="sop-desc">Injeksi nilai otoritas domain (*domain authority*) melalui penanaman backlink kontekstual premium berkualitas tinggi yang aman dari deteksi algoritma sistem spam Google terbaru.</span>
-                </li>
-                <!-- ITEM 5 -->
-                <li class="sop-item">
-                    <span class="sop-title">Monitoring Google Search Console</span>
-                    <span class="sop-desc">Optimasi harian untuk aspek kecepatan indeksasi artikel baru, pembersihan instan jika ada error broken link (404), serta evaluasi analisis rasio Klik-Tayang (*Click-Through Rate*).</span>
-                </li>
-            </ul>
-
-            <!-- GANTI DI SINI: Tautan WhatsApp Custom Anda -->
-            <a href="https://wa.me/628123456789?text=Halo%20SEO%20Tampil,%20saya%20tertarik%20dengan%20Paket%20Tampil%20Maksimal" target="_blank" class="btn-order" style="background-color: #d97706;">Pilih Paket Tampil Maksimal</a>
         </div>
+    </section>
 
+    <!-- CONTENT SECTION: INTEGRASI ARTIKEL SEO BULANAN (MINIMAL 1.000 KATA) -->
+    <!-- Bagian ini menunjukkan bagaimana artikel edukatif dari Paket Tampil Maksimal diletakkan di dalam web -->
+    <section class="content-section" id="panduan-seo">
+        <div class="container">
+            <div class="article-box">
+                
+                <!-- GANTI DI SINI: Judul Artikel Utama Anda (Gunakan Target Keywords Informasional) -->
+                <h2>Panduan Lengkap: Cara Memilih Arsitektur Website yang Tepat untuk Menunjang Skalabilitas Bisnis Retail</h2>
+                
+                <p>Di era digital modern saat ini, memiliki website bukan lagi sekadar pelengkap kartu nama perusahaan Anda. Website merupakan sebuah aset digital properti yang bekerja penuh selama 24 jam untuk mendatangkan prospek penjualan. Namun, kesalahan fatal yang sering dilakukan oleh banyak pelaku usaha baru adalah mengesampingkan faktor arsitektur kode dan kecepatan rendering halaman saat melakukan investasi pertama mereka.</p>
+                
+                <!-- SOP ON-PAGE: Penggunaan Sub-heading H3 untuk membagi topik pembahasan -->
+                <h3>1. Pentingnya Kecepatan Memuat Halaman (*Page Speed*) Terhadap Angka Penjualan</h3>
+                <p>Data riset perilaku konsumen menunjukkan bahwa lebih dari 40% calon pembeli akan langsung meninggalkan sebuah website jika proses loading awal memakan waktu lebih dari 3 detik. Hal ini disebut sebagai *bounce rate*. Menggunakan struktur kode yang terlalu berat tanpa sistem kompresi gambar yang benar dapat dipastikan akan menghancurkan performa iklan digital Anda maupun peringkat organik Anda di mata algoritma Google Search.</p>
 
-        <!-- ======================================================== -->
-        <!-- 3. TEMPLATE PAKET DOMINASI BISNIS -->
-        <!-- ======================================================== -->
-        <div class="template-box box-exclusive">
-            <span class="template-tag" style="background-color: #0f172a; color: #ffffff;">Opsi 03: Skala Korporat</span>
-            
-            <div class="paket-header">
-                <!-- GANTI DI SINI: Nama Paket -->
-                <div class="paket-title">Paket Dominasi Bisnis</div>
-                <!-- GANTI DI SINI: Segmentasi Ringkas -->
-                <div class="paket-target">Semua Fitur Paket Tampil Maksimal ditambah strategi monopoli trafik digital nasional dan optimasi konversi penjualan korporasi.</div>
-                <!-- GANTI DI SINI: Nominal Harga -->
-                <div class="paket-price" style="color: #0f172a;">Rp 7.5M <span>/ Bulan</span></div>
+                <div class="highlight-box">
+                    <p><strong>Catatan Penting Tim Teknis:</strong> Penggunaan server cloud hosting berspesifikasi tinggi dikombinasikan dengan konfigurasi struktur *cache* yang optimal adalah fondasi mutlak yang tidak bisa ditawar jika Anda berniat mendominasi pasar digital lokal.</p>
+                </div>
+
+                <h3>2. Memahami Struktur Navigasi Berjenjang yang Ramah Pengguna</h3>
+                <p>Ketika robot penjelajah (*web crawler*) milik Google mendatangi situs Anda, mereka membaca peta situs Anda untuk memahami apa saja produk utama yang Anda tawarkan. Jika struktur internal tautan Anda berantakan—atau bahkan memuat banyak link rusak yang menghasilkan kode error 404—maka nilai reputasi web Anda akan diturunkan secara drastis. Pastikan jarak klik maksimal dari halaman depan menuju halaman transaksi produk tidak lebih dari tiga kali klik demi kenyamanan navigasi pengguna manusia.</p>
+
+                <p>Melalui perencanaan arsitektur siloing tautan yang matang, aliran otoritas dari halaman utama dapat didistribusikan secara merata ke halaman-halaman produk spesifik. Pola inilah yang membedakan antara website yang dibuat asal jadi dengan website korporat berkinerja tinggi yang siap mendominasi seluruh variasi kata kunci komersial di industri terkait.</p>
+
+                <!-- GANTI DI SINI: Tombol Penutup Artikel / Jembatan Konversi Penjualan -->
+                <a href="https://wa.me/628123456789?text=Saya%20butuh%20audit%20arsitektur%20website" target="_blank" class="btn-primary" style="margin-top: 20px;">Konsultasi Desain Web Anda Sekarang</a>
+                
             </div>
-
-            <hr class="divider">
-            <div class="section-sub-title">Cakupan Kerja Detail (SOP):</div>
-
-            <ul class="sop-list">
-                <!-- ITEM 1 -->
-                <li class="sop-item">
-                    <span class="sop-title">Semua Fitur Paket Tampil Maksimal</span>
-                    <span class="sop-desc">Termasuk di dalamnya ekspansi kuota pembuatan artikel otoritas tinggi (8 artikel artikel mendalam per bulan) serta jatah strategi sebaran backlink dari media nasional dengan matriks otoritas tinggi.</span>
-                </li>
-                <!-- ITEM 2 -->
-                <li class="sop-item">
-                    <span class="sop-title">Technical SEO Advancement</span>
-                    <span class="sop-desc">Pemasangan Schema Markup terstruktur (JSON-LD), perancangan arsitektur siloing tautan internal yang kompleks, hingga optimalisasi Core Web Vitals untuk mencapai skor kecepatan situs maksimal.</span>
-                </li>
-                <!-- ITEM 3 -->
-                <li class="sop-item">
-                    <span class="sop-title">Content Marketing Plan Khusus</span>
-                    <span class="sop-desc">Analisis berkala kesenjangan konten (*Content Gap Analysis*) dengan kompetitor industri terbesar berskala nasional untuk merebut paksa potensi trafik yang belum sempat Anda garap sebelumnya.</span>
-                </li>
-                <!-- ITEM 4 -->
-                <li class="sop-item">
-                    <span class="sop-title">Audit UX/UI untuk Konversi Penjualan</span>
-                    <span class="sop-desc">Tim kami melakukan riset Conversion Rate Optimization (CRO) untuk menganalisis perilaku pengunjung di halaman landas agar persentase klik mereka berubah menjadi transaksi nyata secara efektif.</span>
-                </li>
-                <!-- ITEM 5 -->
-                <li class="sop-item">
-                    <span class="sop-title">Dukungan Prioritas WA 24/7</span>
-                    <span class="sop-desc">Fasilitas grup koordinasi instan eksklusif bersama tim ahli utama kami serta penunjukan satu orang *Dedicated Account Manager* khusus untuk merespon seluruh kebutuhan harian perusahaan Anda.</span>
-                </li>
-            </ul>
-
-            <!-- GANTI DI SINI: Tautan WhatsApp Custom Anda -->
-            <a href="https://wa.me/628123456789?text=Halo%20SEO%20Tampil,%20perusahaan%20kami%20tertarik%20dengan%20Paket%20Dominasi%20Bisnis" target="_blank" class="btn-order" style="background-color: #0f172a;">Pilih Paket Dominasi Bisnis</a>
         </div>
+    </section>
 
-    </div>
+    <!-- FOOTER -->
+    <footer id="kontak">
+        <div class="container">
+            <p>&copy; 2026 WebXcelerate Corporation. Hak Cipta Dilindungi Undang-Undang.</p>
+            <p style="font-size: 12px; margin-top: 5px; color: #64748b;">Situs sampel integrasi sistem navigasi & optimasi on-page komprehensif.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
